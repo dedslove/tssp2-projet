@@ -1,0 +1,58 @@
+.pdf-links {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.pdf-links h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.pdf-category {
+  margin-bottom: 2rem;
+}
+
+.pdf-category h3 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pdf-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pdf-category li {
+  margin-bottom: 0.8rem;
+}
+
+.pdf-category a {
+  text-decoration: none;
+  color: #337ab7;
+  font-size: 1.1rem;
+}
+
+.pdf-category a:hover {
+  text-decoration: underline;
+  color: #23527c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pdf-links h2 {
+    font-size: 2rem;
+  }
+
+  .pdf-category h3 {
+    font-size: 1.5rem;
+  }
+
+  .pdf-category a {
+    font-size: 1rem;
+  }
+}

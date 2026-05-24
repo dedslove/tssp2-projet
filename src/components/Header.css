@@ -1,0 +1,108 @@
+.header {
+  background-color: #282c34; /* bande noire */
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Times New Roman", Times, serif; /* Police appliquée */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Zone du nom ou logo */
+.school-name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.school-name img {
+  height: 50px; /* ajuste la taille du logo */
+}
+
+/* Menu principal */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-nav ul li {
+  position: relative;
+  margin-left: 20px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main-nav ul li a:hover {
+  background-color: #61dafb;
+  color: #282c34;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #282c34;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.dropdown-content a:hover {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background-color: #3a3f47;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Sur mobile, prévoir un toggle JS */
+  }
+
+  .main-nav.responsive ul {
+    display: flex;
+  }
+}

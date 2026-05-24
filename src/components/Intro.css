@@ -1,0 +1,138 @@
+.intro {
+  position: relative;
+  padding: 0 1.5rem 1.75rem;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  background: var(--bg-page);
+  transition: background 0.3s ease;
+}
+
+/* Cadre aligné sur la section Formations (1200px) */
+.intro-frame {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 72vh;
+  overflow: hidden;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 8px 28px var(--shadow-color);
+}
+
+/* Carrousel fond — défilement gauche → droite */
+.intro-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.intro-bg-track {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: transform 0.9s ease-in-out;
+  will-change: transform;
+}
+
+.intro-bg-slide {
+  flex: 0 0 50%;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--intro-overlay);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 4.5rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.intro-welcome {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--blanc);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.presentation {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--blanc);
+  line-height: 1.65;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.presentation strong {
+  color: var(--or);
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: justify;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--or);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description em {
+  color: #ffe0a8;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 0 1rem 1.25rem;
+  }
+
+  .intro-frame {
+    min-height: auto;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .intro-content {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .intro-welcome {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .presentation {
+    font-size: 1.05rem;
+  }
+
+  .description {
+    font-size: 0.98rem;
+    text-align: left;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,99 @@
+.footer {
+  background: var(--bg-footer);
+  color: rgb(232, 234, 237);
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+  margin-top: auto;
+  border-top: 3px solid var(--or);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 20px 1.25rem;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  color: var(--or);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.footer-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgb(232, 234, 237);
+}
+
+.footer-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.25rem;
+}
+
+.footer-contact a {
+  color: var(--blanc);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--or);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 20px 1.1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-credit {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+  max-width: 640px;
+}
+
+.footer-credit strong {
+  color: var(--or);
+  font-weight: 700;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    padding: 1.5rem 16px 1rem;
+  }
+
+  .footer-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+}

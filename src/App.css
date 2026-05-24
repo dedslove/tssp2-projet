@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─── Mode clair (défaut) ─── */
+:root,
+[data-theme='light'] {
+  --bleu: #003f7f;
+  --bleu-clair: #0066cc;
+  --or: #f5a623;
+  --blanc: #ffffff;
+  --gris-clair: #f0f4f8;
+  --texte: #333333;
+  --texte-muted: #666666;
+  --header-bg: #1e2430;
+
+  --bg-page: #f0f4f8;
+  --bg-section: linear-gradient(180deg, #f0f4f8 0%, #e8eef5 100%);
+  --bg-navbar: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f0f4f8;
+  --bg-surface-hover: #ffffff;
+  --bg-footer: linear-gradient(180deg, #1e2430 0%, #151a22 100%);
+  --bg-toggle: #f0f4f8;
+  --toggle-track-bg: #c5d4e3;
+  --toggle-thumb-bg: #ffffff;
+
+  --border-subtle: rgba(0, 63, 127, 0.12);
+  --border-nav: rgba(0, 63, 127, 0.2);
+  --shadow-color: rgba(0, 63, 127, 0.1);
+
+  --nav-link-color: #003f7f;
+  --nav-link-hover-bg: rgba(0, 63, 127, 0.07);
+  --nav-active-bg: #003f7f;
+  --nav-active-text: #ffffff;
+
+  --intro-overlay: linear-gradient(
+    135deg,
+    rgba(0, 35, 70, 0.78) 0%,
+    rgba(0, 63, 127, 0.65) 45%,
+    rgba(0, 25, 50, 0.82) 100%
+  );
+
+  --input-border: #cccccc;
+  --input-bg: #ffffff;
+  --drive-badge-bg: rgba(0, 102, 204, 0.1);
+}
+
+/* ─── Mode sombre — bleu cobalt ─── */
+[data-theme='dark'] {
+  --bleu: #7eb8e8;
+  --bleu-clair: #a8d4ff;
+  --or: #f5c451;
+  --blanc: #ffffff;
+  --gris-clair: #1a2d4a;
+  --texte: #e8eef4;
+  --texte-muted: #9eb0c4;
+  --header-bg: #0f1a2e;
+
+  --bg-page: #0c1628;
+  --bg-section: linear-gradient(180deg, #0c1628 0%, #101e34 100%);
+  --bg-navbar: #101c30;
+  --bg-surface: #162a45;
+  --bg-surface-alt: #1a3254;
+  --bg-surface-hover: #1e3a5c;
+  --bg-footer: linear-gradient(180deg, #0f1a2e 0%, #0a1220 100%);
+  --bg-toggle: #1a2d4a;
+  --toggle-track-bg: #243b5c;
+  --toggle-thumb-bg: #c5d9ef;
+
+  --border-subtle: rgba(126, 184, 232, 0.18);
+  --border-nav: rgba(126, 184, 232, 0.28);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+
+  --nav-link-color: #c5d9ef;
+  --nav-link-hover-bg: rgba(126, 184, 232, 0.12);
+  --nav-active-bg: #3d6a9e;
+  --nav-active-text: #ffffff;
+
+  --intro-overlay: linear-gradient(
+    135deg,
+    rgba(8, 18, 35, 0.88) 0%,
+    rgba(15, 40, 75, 0.82) 45%,
+    rgba(6, 14, 28, 0.92) 100%
+  );
+
+  --input-border: rgba(126, 184, 232, 0.35);
+  --input-bg: #1a2d4a;
+  --drive-badge-bg: rgba(126, 184, 232, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  color: var(--texte);
+  background-color: var(--bg-page);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+  transition: background-color 0.3s ease;
+}
+
+.App main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+section.intro {
+  padding: 0;
+}
+
+.section-titre {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--bleu);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-sous-titre {
+  text-align: center;
+  color: var(--texte-muted);
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+.separateur {
+  width: 60px;
+  height: 4px;
+  background-color: var(--or);
+  margin: 12px auto 16px auto;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .section-titre {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
